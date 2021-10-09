@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+
+        .title {
+            color: darkred;
+            font-family: "Times New Roman", cursive; 
+            font-size: 20px;
+            line-height: 10px; 
+            font-weight: normal;
+            text-align: center;
+        }
+
+        .documentation {
+            float: center;
+            width: 70%;
+            padding-left: 250px;
+            padding-right: 70px;
+            font-size: 15px;
+            font-family: "Times New Roman", cursive; 
+        }
+    </style>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Project 1 Documentation</title>
+    </head>
+
+    <body>
+        <div class="button">
+            <a href="index.html">Back to Project</a>
+        </div>
+        <div class="title">
+            <h2>Documentation</h2>
+            </div>
+            <div class="documentation">
+                <h3>Design Process</h3>
+                <p>This project was the most challenging coding project I have ever had to endure. 
+                    Having never had experience with HTML, javascript, or D3, I began my design process thinking like
+                    a minimalist. My first obvious goal was to replicate the original map with its three key elements: 
+                    deaths, pumps, and streets. Once I successfully plotted red dots representing deaths and black dots
+                    representing pumps, I felt a better sense of agency of what I wanted the final project to look like.
+                </p>     
+                <p>
+                    The map itself is the star of the show. Because of this, I initially wanted it to be very big and flashy. 
+                    When I envisioned a recreation of the famous map, I saw it as something that needed to be at least 800 x 800 
+                    pixels in the center of the screen. It wasn't until I added some of the auxiliary visualizations that I reconsidered 
+                    the presence of the map. 
+                </p>
+                <p>
+                    The second chart I built was a Deaths by Date line chart--rather, a density chart. I intended it originally to be 
+                    a line chart because this is the most universal way of showing a quantitative variable like Deaths trending over a 
+                    continuous date range, but somewhat accidentally, my viz filled in black below my red trend line, and it struck me as 
+                    somewhat beautiful. Not only that, but it was effective in showing the dense spike in deaths on September 1st. 
+                </p>
+                <p>
+                    The red and black density viz inspired me to proceed with this grim, gory theme of red and black. I didn't want any of
+                     the colors to be too abrasive or unsettling, but it was a color theme that subtly highlighted this scary sequence of 
+                     events in London at the time. Furthermore, it reflected the minimalist approach I originally was aiming for. 
+                </p>
+                <p> The next two visualizations I created were both simple bar charts: one showing the deaths by gender, and the other 
+                    showing deaths by age range. I considered using color as a channel for the two genders, but I decided that it added 
+                    hardly any value to the visualization because the viewer could just read "Female" and "Male" on the axis to 
+                    differentiate the two. Also, the total deaths for females and males were nearly identical, so there wasn't a need 
+                    to contrast the two. For the deaths by age range viz, I proceeded with my minimalist approach and made yet another 
+                    black bar chart with the dark red trim. The biggest challenge with this viz was fitting the axis labels on the 
+                    x-axis. I ended up rotating the labels, and the result looked rather nice.
+                </p>
+
+                <h3>Visualization Layout</h3>
+                <p> Once all 4 of my charts were created, I pondered how to best represent them for the viewer. 
+                    I came to a realization that I wanted all of the charts to fit on the same screen for the viewer instead of 
+                    having the map be very large. The viewer would have to scroll to the other visualizations, and this would be 
+                    an inconvenience given that I was hoping to add interaction between the visualizations. The first step I took 
+                    was shrinking the size of the map basically in half. Because it then looked too small to read, I added a nifty
+                     zoom feature that allows the viewer to magnify the map to read it more clearly. 
+                </p>
+                <p>After sizing the map, I then had to figure out how the other visualizations would support the map. 
+                    I made the decision to put the remaining three visualizations side-by-side in a flex container 
+                    that would lie directly below the map. I knew I wanted interaction between my density chart and my map, so 
+                    I centered the density chart directly under it. I felt like the other two visualizations were very similar in 
+                    design and value, so I didn't have a preference on which of the two fell on either side of the density chart. 
+                    Regardless, my vizualization was now finalized and ready to add interaction.
+                </p>
+                <p>
+                    Aside from tooltips in the two center visualizations, the main interaction I wanted was changing the number of death dots 
+                    on the map depending on which day it was. I added a click filter on my density chart. When the viewer clicks a dot 
+                    for a particular date, the deaths on the map filter to show only dots that died on that date or prior to that date. 
+                    I didn't feel the particular need to filter the dots in this way by age or by gender. 
+                </p>
+
+                <h3>Surprising Findings</h3>
+                <p>
+                    The best part of this project was using my visualizations to learn something new about this data that I didn't 
+                    previously notice. Here are some discoveries I found when viewing and interacting with this viz. 
+                    <br>
+                    <br> 1. There was a clear spike in cholera deaths on a particular day-- September 1st. I would have assumed 
+                    the outbreak and deaths would have been a more gradual process, but the water must have become infected in the 
+                    central pump on a specific day. 
+                    <br> 2. The elderly and children definitely struggled with this illness more than anybody aged 11-80 years old. 
+                    I did not have any prior knowledge of cholera and its effects on humans, and I suppose it's surprising that children 
+                    were so susceptible to dying from it. 
+                    <br> 3. More than anything, this visualization made me wonder more about the distribution of pump use in central 
+                    London. Was the central pump the only pump that had cholera-infected water, or did most people just live (and die) 
+                    in the central part of town near Broad street? I would love to see a population density map for the downtown area. 
+                </p>
+    </body>
